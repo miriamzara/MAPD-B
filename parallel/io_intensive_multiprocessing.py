@@ -29,7 +29,7 @@ def io_function(the_url):
     file.close()
 
     print (f'time for request and store from url [...]{the_url[-50:]} = {time.time()-time_start:.2f} sec')
-    
+    return 
     
 if __name__ == '__main__':
     

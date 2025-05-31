@@ -34,6 +34,10 @@ if __name__ == '__main__':
     #
     # This means that the main program execution will not 
     # get past them until all sub-processes are completed
+    # results different from "futures" in the previous examples
+    # the code will not proceed until processes are completed
+    # and results is filled
+
     
     # Get the results
     print(f'List of process results: {results}')

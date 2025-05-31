@@ -5,11 +5,9 @@ from threading import Thread
 
 def my_sum(a, b):
     """A simple function summing integers from a to b."""
-    
     # Create an instance of local (per-thread) memory 
     # Now "the_sum" is **explicitly** thread-specific
     the_sum = threading.local() 
-
     the_sum = 0    
     for i in range(a, b):
         the_sum += i

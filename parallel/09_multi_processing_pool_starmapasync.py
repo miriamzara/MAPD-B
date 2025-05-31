@@ -30,7 +30,7 @@ if __name__ == '__main__':
     future_results = pool.starmap_async(my_sum, [(MIN + _*(MAX - MIN)//N_PROCESSES, MIN + (_+1)*(MAX - MIN)//N_PROCESSES) \
                                                  for _ in range(N_PROCESSES)])
     
-    # The `map_async` and `starmap_async` functions are **on-blocking**
+    # The `map_async` and `starmap_async` functions are **non-blocking**
     #
     # This means that the main program execution will continue 
     # while the mapped functions are run concurrently

@@ -59,9 +59,13 @@ if __name__ == '__main__':
                                 MIN + _*(MAX - MIN)//N_THREADS,
                                 MIN + (_+1)*(MAX - MIN)//N_THREADS,
                                 MOD) for _ in range(executor._max_workers)]   
-
+    # ....
+    # .... here you could write other lines of code
+    # they would be executed while "futures" is getting filled
+    # .... 
     # Wait for all threads to be done
-    wait(futures)
+    wait(futures) # this tells that the program does not proceed further until
+                  # all the threads are done 
 
     # Stop the timer
     end = time.time()

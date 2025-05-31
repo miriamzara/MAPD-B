@@ -41,6 +41,13 @@ if __name__ == '__main__':
     # i.e. it waits for a thread to have completed its task before proceeding onward
     #
     # ??? What would happen if we removed the join call and execute the script ???
+    # Answer: simply, since there is no blocking statement, the execution of the
+    # script would proceed without waiting for the results.
+    # In this case, since the remaining part of the script is very simple and fast,
+    # we see first the output of print(f'Time taken = {end - start:.2f} sec'), 
+    # and then the result of the threads.
+    # Notice that t1 gives results before and t2 after. Indeed, they are sequentially
+    # unlocked in the same order as they are defined.
     t1.join()
     t2.join()
 
